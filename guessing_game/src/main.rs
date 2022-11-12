@@ -34,4 +34,13 @@ fn main() {
             }
         }
     }
+
+    // {
+    //     let sn: &mut u32 = &mut secret_number;
+    //     //secret_number = 6;
+    //     //println!("sn:  {sn} {secret_number}");
+    // }
+    // secret_number = 6;
+    // println!("{secret_number}");
+
 }
