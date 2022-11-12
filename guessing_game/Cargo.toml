@@ -2,6 +2,12 @@
 name = "guessing_game"
 version = "0.1.0"
 edition = "2021"
+description = "A game to guess a number"
+repository = "https://github.com/jakroth/rust_projects"
+readme = "../README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["learn rust", "guess", "game"]
+categories = ["study", "personal"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

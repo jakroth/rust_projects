@@ -1,3 +1,11 @@
+#![warn(clippy::cargo)]
+#![deny(clippy::all)]
+#![warn(clippy::pedantic)]
+#![warn(clippy::nursery)]
+#![warn(clippy::unwrap_used)]
+#![warn(clippy::expect_used)]
+
+
 use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
@@ -13,7 +21,12 @@ fn main() {
         println!("Please input your guess.");
 
         let mut guess: String = String::new();
-
+        
+        #[allow(clippy::expect_used)] // allows expect for this one occasion only
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
+        
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
@@ -44,3 +57,5 @@ fn main() {
     // println!("{secret_number}");
 
 }
+
+
