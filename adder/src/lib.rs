@@ -36,7 +36,6 @@ impl Guess {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -80,5 +79,4 @@ mod tests {
     fn greater_than_100() {
         Guess::new(200);
     }
-
 }

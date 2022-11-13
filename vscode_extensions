@@ -1,0 +1,9 @@
+Better TOML  
+Code LLDB  
+crates  
+rust-analyzer
+
+note: change the default vscode linter: 
+"Rust-analyzer > Check on Save: Command (rust-analyzer.checkOnSave.command) setting to clippy instead of the default check"
+
+also check out Assists
