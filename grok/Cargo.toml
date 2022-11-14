@@ -1,0 +1,14 @@
+[package]
+name = "grok"
+version = "0.1.0"
+edition = "2021"
+description = "A grep-like file searching command"
+repository = "https://github.com/jakroth/rust_projects"
+readme = "../README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["learn rust", "file search", "string", "command line"]
+categories = ["study", "personal", "command line utility"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
