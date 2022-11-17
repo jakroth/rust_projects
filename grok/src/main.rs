@@ -3,17 +3,17 @@
 #![warn(clippy::pedantic)]
 #![warn(clippy::nursery)]
 #![warn(clippy::unwrap_used)]
-//#![warn(clippy::expect_used)]
+#![warn(clippy::expect_used)]
 
 use std::env;
 use std::process;
 use grok::Config;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    //let args: Vec<String> = env::args().collect();
     //dbg!(&args);
 
-    let config = Config::build(&args).unwrap_or_else(|err| {
+    let config = Config::build(env::args()).unwrap_or_else(|err| {
         eprintln!("Problem parsing arguments: {err}");
         process::exit(1);
     });
