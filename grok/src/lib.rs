@@ -9,6 +9,8 @@ use std::env;
 use std::fs;
 use std::error::Error;
 
+
+
 pub struct Config {
     query: String,
     file_path: String,
@@ -17,8 +19,13 @@ pub struct Config {
 
 
 impl Config {
+
+    //! # Grok Library
+    //! this is crate level documentation i think
+
     /// # Errors
     ///
+    /// Example documentation: 
     /// Will return `Err` if `filename` does not exist or the user does not have
     /// permission to read it.
     pub fn build(
