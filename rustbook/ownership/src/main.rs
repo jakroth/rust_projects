@@ -9,7 +9,7 @@ fn main() {
 
     // do stuff with s
 
-    // assignment of heap variables is always a move
+    // copy assignment of heap variables is actually a move
     let s1 = String::from("hello");
     let s2 = s1;
     //println!("{s1}, world!");
@@ -24,7 +24,7 @@ fn main() {
     let s2 = s1.clone();
     println!("s1 = {s1}, s2 = {s2}");
 
-    // assignment of stack values with the Copy trait preserve the original
+    // copy assignment of stack values (which have the Copy trait) preserve the original
     let x = 5;
     let y = x;
     println!("x = {x}, y = {y}");
@@ -39,15 +39,15 @@ fn main() {
 
     let s1 = gives_ownership(); // gives_ownership moves its return value into s1
     let s2 = String::from("hello"); // s2 comes into scope
-    let s3 = takes_and_gives_back(s2); // s2 is moved into
-    // takes_and_gives_back, which also moves its return value into s3
+    let s3 = takes_and_gives_back(s2); // s2 is moved into takes_and_gives_back, which also moves its return value into s3
 
     // pass by reference to avoid ownership issues
     let s1 = String::from("hello");
     let len = calculate_length(&s1);
     println!("The length of '{s1}' is {len}.");
 
-    // mutable references
+    // mutable references - only one can exist at a time (and no immutable references)
+    // multiple immutable references can exist at the same time
     let mut s = String::from("hello");
     change(&mut s);
 
