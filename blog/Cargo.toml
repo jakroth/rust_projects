@@ -1,0 +1,21 @@
+[package]
+name = "blog"
+version = "0.1.0"
+edition = "2021"
+description = "A blog posting app demonstrating object oriented code"
+repository = "https://github.com/jakroth/rust_projects"
+readme = "../README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["learn rust", "object oriented", "OO",  "trait object", "blog"]
+categories = ["study", "personal", "command line utility"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3

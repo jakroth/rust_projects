@@ -1,0 +1,21 @@
+[package]
+name = "gui"
+version = "0.1.0"
+edition = "2021"
+description = "A basic gui building blocks program, using trait objects"
+repository = "https://github.com/jakroth/rust_projects"
+readme = "../README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["learn rust", "gui", "trait object"]
+categories = ["study", "personal", "command line utility"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
